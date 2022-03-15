@@ -33,16 +33,15 @@ h3 {
   text-align: center;
   font-family: "Shrikhand", cursive;
   font-size: 36px;
-  /*display: flex;
-  justify-content: center;
-  img {
-      margin: 20px 0;
-      width: 200px;
-  }*/
 }
 
 /* End of Header */
 /* Main */
+main > div {
+  display: flex;
+  flex-direction: column;
+}
+
 .section {
   background-color: #F6F6F6;
   padding: 50px 20px;
@@ -61,7 +60,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-content: center;
-  box-shadow: inset 1px 5px 10px -8px #000;
+  box-shadow: inset 0px 5px 10px -12px #000;
   padding: 20px 0;
   background-color: #dddddd;
   color: #333333;
@@ -115,10 +114,18 @@ h3 {
   color: #9356DC;
 }
 
+.restaurants > div {
+  display: flex;
+  flex-direction: column;
+}
+
 .restaurant-card {
+  display: block;
   margin-bottom: 20px;
   border-radius: 20px;
   box-shadow: 1px 1px 8px #D9D9D9;
+  text-decoration: none;
+  color: #000;
 }
 .restaurant-card__illustration {
   position: relative;
@@ -171,6 +178,40 @@ h3 {
     height: 270px;
   }
 }
+@media (min-width: 768px) {
+  main {
+    box-shadow: inset 0px 5px 10px -12px #000;
+  }
+  main > div {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  main > div > section {
+    width: 48%;
+  }
+  main > div > section:nth-child(2) {
+    padding: 0 20px;
+    box-shadow: inset 0px 5px 10px -12px #000;
+  }
+
+  main > div:nth-child(1) > section:nth-child(1) {
+    background-color: #FFF;
+  }
+
+  .restaurants > div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurants > div > a {
+    width: 48%;
+  }
+}
+@media (min-width: 992px) {
+  .restaurants > div > a {
+    width: 31%;
+  }
+}
 /* End of Main */
 /* Footer */
 .footer {
@@ -188,6 +229,16 @@ h3 {
 }
 .footer__elements li {
   margin-bottom: 5px;
+}
+.footer__elements a {
+  text-decoration: none;
+  color: #FFF;
+}
+.footer__elements a:hover {
+  text-decoration: underline #FFF;
+}
+.footer__elements i.fa-handshake {
+  transform: rotate(-45deg);
 }
 
 /* End of Footer */
