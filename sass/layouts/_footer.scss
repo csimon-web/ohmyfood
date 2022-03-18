@@ -1,0 +1,32 @@
+.footer {
+    padding: 20px;
+    background-color: $color-background-footer;
+    color: $color-text-footer;
+    &__title {
+        @media (min-width: 768px) {
+            text-align: center;
+        }
+    }
+    &__elements {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin-bottom: 5px;
+            @media (min-width: 768px) {
+                display: inline-block;
+                width: 24%;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: $color-text-footer;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        i.fa-handshake {
+            transform: rotate(-45deg);
+        }
+    }
+}

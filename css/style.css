@@ -1,4 +1,6 @@
-/* Global */
+/*@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";*/
 * {
   box-sizing: border-box;
 }
@@ -6,12 +8,15 @@
 body {
   background-color: #FFF;
   color: #000;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
 }
 
 img {
   object-fit: cover;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
 
 h1, h2, h3 {
@@ -26,30 +31,93 @@ h3 {
   font-size: 16px;
 }
 
-/* End of Global */
-/* Header */
 .header {
-  padding: 20px 0;
-  text-align: center;
   font-family: "Shrikhand", cursive;
   font-size: 36px;
 }
 
-/* End of Header */
-/* Main */
-main > div {
+.footer__title {
+  font-family: "Shrikhand", cursive;
+}
+
+/*@import "./components/buttons";*/
+.header {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #353535;
+  color: #FFF;
+}
+@media (min-width: 768px) {
+  .footer__title {
+    text-align: center;
+  }
+}
+.footer__elements {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer__elements li {
+  margin-bottom: 5px;
+}
+@media (min-width: 768px) {
+  .footer__elements li {
+    display: inline-block;
+    width: 24%;
+  }
+}
+.footer__elements a {
+  text-decoration: none;
+  color: #FFF;
+}
+.footer__elements a:hover {
+  text-decoration: underline;
+}
+.footer__elements i.fa-handshake {
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+  .home {
+    box-shadow: inset 0px 5px 10px -12px #000;
+  }
+}
+.home > div {
   display: flex;
   flex-direction: column;
 }
-
-.section {
+@media (min-width: 768px) {
+  .home > div {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 768px) {
+  .home > div > section {
+    width: 48%;
+  }
+  .home > div > section:nth-child(2) {
+    padding: 0 20px;
+    box-shadow: inset 0px 5px 10px -12px #000;
+  }
+}
+@media (min-width: 768px) {
+  .home > div:nth-child(1) > section:nth-child(1) {
+    background-color: #FFF;
+  }
+}
+.home__section {
   background-color: #F6F6F6;
   padding: 50px 20px;
 }
-.section--centered {
+.home__section--centered {
   text-align: center;
 }
-.section--other-background {
+.home__section--other-background {
   background-color: #FFF;
 }
 
@@ -118,6 +186,23 @@ main > div {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .restaurants > div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 768px) {
+  .restaurants > div > a {
+    width: 48%;
+  }
+}
+@media (min-width: 992px) {
+  .restaurants > div > a {
+    width: 31%;
+  }
+}
 
 .restaurant-card {
   display: block;
@@ -167,80 +252,5 @@ main > div {
   margin: auto 0;
   font-size: 30px;
 }
-
-@media (min-width: 360px) {
-  .restaurant-card__image img {
-    height: 220px;
-  }
-}
-@media (min-width: 560px) {
-  .restaurant-card__image img {
-    height: 270px;
-  }
-}
-@media (min-width: 768px) {
-  main {
-    box-shadow: inset 0px 5px 10px -12px #000;
-  }
-  main > div {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  main > div > section {
-    width: 48%;
-  }
-  main > div > section:nth-child(2) {
-    padding: 0 20px;
-    box-shadow: inset 0px 5px 10px -12px #000;
-  }
-
-  main > div:nth-child(1) > section:nth-child(1) {
-    background-color: #FFF;
-  }
-
-  .restaurants > div {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .restaurants > div > a {
-    width: 48%;
-  }
-}
-@media (min-width: 992px) {
-  .restaurants > div > a {
-    width: 31%;
-  }
-}
-/* End of Main */
-/* Footer */
-.footer {
-  padding: 20px;
-  background-color: #353535;
-  color: #FFF;
-}
-.footer__title {
-  font-family: "Shrikhand", cursive;
-}
-.footer__elements {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.footer__elements li {
-  margin-bottom: 5px;
-}
-.footer__elements a {
-  text-decoration: none;
-  color: #FFF;
-}
-.footer__elements a:hover {
-  text-decoration: underline #FFF;
-}
-.footer__elements i.fa-handshake {
-  transform: rotate(-45deg);
-}
-
-/* End of Footer */
 
 /*# sourceMappingURL=style.css.map */
