@@ -1,6 +1,18 @@
 .header {
     padding: 20px 0;
     text-align: center;
+    &__link {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        margin-left: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        i {
+            color: $color-text-body;
+        }
+    }
+    &__title {}
 }
 
 @media (min-width: 768px) {
