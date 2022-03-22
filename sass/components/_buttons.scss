@@ -1,9 +1,9 @@
 .button {
-    margin: 0 auto 50px auto;
+    display: block;
+    margin: 0 auto;
     border: none;
     border-radius: 50px;
     padding: 20px;
-    width: 50%;
-    background: $color-primary;
+    background: linear-gradient(-10deg, $color-primary, $color-secondary);
     color: $color-text-footer;
 }

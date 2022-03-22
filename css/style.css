@@ -41,29 +41,33 @@ h3 {
 }
 
 .button {
-  margin: 0 auto 50px auto;
+  display: block;
+  margin: 0 auto;
   border: none;
   border-radius: 50px;
   padding: 20px;
-  width: 50%;
-  background: #9356DC;
+  background: linear-gradient(-10deg, #9356DC, #FF79DA);
   color: #FFF;
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
   padding: 20px 0;
-  text-align: center;
 }
 .header__link {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  margin-left: 20px;
-  cursor: pointer;
+  display: block;
+  width: 32px;
   text-decoration: none;
+  margin-left: 30px;
+  margin-right: 0;
 }
 .header__link i {
   color: #000;
+}
+.header__link--other-side {
+  margin-left: 0;
+  margin-right: 30px;
 }
 .footer {
   padding: 20px;
@@ -76,72 +80,81 @@ h3 {
   }
 }
 .footer__elements {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+@media (min-width: 768px) {
+  .footer__elements {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .footer__elements li {
   margin-bottom: 5px;
 }
 @media (min-width: 768px) {
   .footer__elements li {
-    display: inline-block;
     width: 24%;
   }
 }
-.footer__elements a {
+.footer__elements li a {
   text-decoration: none;
   color: #FFF;
 }
-.footer__elements a:hover {
-  text-decoration: underline;
-}
-.footer__elements i.fa-handshake {
+.footer__elements li a i.fa-handshake {
   transform: rotate(-45deg);
+}
+.footer__elements li a:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
-  .home {
+  .home-main-tag {
     box-shadow: inset 0px 5px 10px -12px #000;
   }
 }
-.home > div {
+.home-main-tag__section {
+  background-color: #F6F6F6;
+  padding: 50px 20px;
+}
+.home-main-tag__section--centered {
+  text-align: center;
+}
+.home-main-tag__section--other-background {
+  background-color: #FFF;
+}
+.home-main-tag > div {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  .home > div {
+  .home-main-tag > div {
     flex-direction: row;
     justify-content: space-around;
   }
 }
 @media (min-width: 768px) {
-  .home > div > section {
+  .home-main-tag > div > section {
     width: 48%;
   }
-  .home > div > section:nth-child(2) {
+  .home-main-tag > div > section:nth-child(2) {
     padding: 0 20px;
     box-shadow: inset 0px 5px 10px -12px #000;
   }
 }
 @media (min-width: 768px) {
-  .home > div:nth-child(1) > section:nth-child(1) {
+  .home-main-tag > div:nth-child(1) > section:nth-child(1) {
     background-color: #FFF;
   }
 }
-.home__section {
-  background-color: #F6F6F6;
-  padding: 50px 20px;
-}
-.home__section--centered {
-  text-align: center;
-}
-.home__section--other-background {
-  background-color: #FFF;
-}
 
 .restaurant-selection {
-  padding: 0;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
   /*&__search-button {
       margin-bottom: 50px;
       border: none;
@@ -169,6 +182,7 @@ h3 {
   border: none;
 }
 .restaurant-selection__title {
+  font-family: "Roboto", sans-serif;
   margin: 50px 40px 20px 40px;
 }
 .restaurant-selection__text {
@@ -176,12 +190,15 @@ h3 {
   color: #333333;
 }
 
+.website-instructions__title {
+  font-family: "Roboto", sans-serif;
+}
 .website-instructions__list__item {
-  margin: 0 auto 20px auto;
+  margin: 0 0 20px 0;
   border: none;
   border-radius: 20px;
   padding: 30px 50px;
-  width: 80%;
+  width: 100%;
   text-align: left;
 }
 .website-instructions__list span {
@@ -201,24 +218,27 @@ h3 {
   color: #9356DC;
 }
 
-.restaurants > div {
+.restaurants-section__title {
+  font-family: "Roboto", sans-serif;
+}
+.restaurants-section__content {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  .restaurants > div {
+  .restaurants-section__content {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
 }
 @media (min-width: 768px) {
-  .restaurants > div > a {
+  .restaurants-section__content > a {
     width: 48%;
   }
 }
 @media (min-width: 992px) {
-  .restaurants > div > a {
+  .restaurants-section__content > a {
     width: 31%;
   }
 }
@@ -267,39 +287,72 @@ h3 {
   padding: 0 20px 10px 20px;
   background-color: #FFF;
 }
+.restaurant-card__description__name {
+  font-family: "Roboto", sans-serif;
+}
 .restaurant-card__like {
   margin: auto 0;
   font-size: 30px;
 }
 
-.menu > section {
-  margin-bottom: 40px;
-  padding: 0 20px;
+.menu-main-tag {
+  background-color: #F6F6F6;
 }
-.menu > div:nth-child(2) {
-  display: flex;
-  justify-content: center;
+
+.hero {
+  height: 240px;
+}
+.hero > img {
+  width: 100%;
+  height: 240px;
 }
 
 .menu {
-  background-color: #F6F6F6;
+  position: relative;
+  top: -40px;
 }
-.menu > div:nth-child(1) > div {
-  height: 200px;
-}
-.menu > div:nth-child(1) > div > img {
-  width: 100%;
-  height: 200px;
-}
-.menu > div:nth-child(1) > h1 {
+.menu__title {
   display: flex;
   justify-content: space-between;
-  border-radius: 10px 10px 0 0;
+  margin: 0;
+  margin-bottom: 20px;
+  border-radius: 40px 40px 0 0;
   padding: 20px 20px 0 20px;
+  background-color: #F6F6F6;
   line-height: 40px;
 }
-.menu > div:nth-child(1) > h1 > i {
+.menu__title > i {
   text-align: right;
+}
+@media (min-width: 768px) {
+  .menu__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.menu__content > section {
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .menu__content > section {
+    width: 33%;
+  }
+}
+.menu__content > section > h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.menu__content > section > hr {
+  margin: 0;
+  margin-bottom: 10px;
+  border: 1px solid #99E2D0;
+  width: 10%;
 }
 .menu-item {
   margin-bottom: 20px;
@@ -309,6 +362,7 @@ h3 {
   box-shadow: 1px 1px 8px #D9D9D9;
 }
 .menu-item__name {
+  font-family: "Roboto", sans-serif;
   margin: 0 0 14px 0;
 }
 .menu-item > div {
@@ -323,6 +377,11 @@ h3 {
   width: 30px;
   text-align: right;
   font-weight: bold;
+}
+
+.order-button {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

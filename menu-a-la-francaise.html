@@ -16,88 +16,98 @@
 <body>
     <header class="header">
         <a href="index.html" class="header__link"><i class="fa-solid fa-arrow-left"></i></a>
-        <span class="header__title">ohmyfood</span>
+        <div class="header__title">ohmyfood</div>
+        <div class="header__link--other-side"> </div>
     </header>
-    <main class="menu">
+    <main class="menu-main-tag">
         <div class="hero">
-            <div><img src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="a la francaise"></div>
-            <h1><span>À la française</span><i class="fa-regular fa-heart"></i></h1>
+            <img src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="a la francaise">
         </div>
-        <section>
-            <h2>Entrées</h2>
-            <div class="menu-item">
-                <h3 class="menu-item__name">Tartare de poulpe acidulé</h3>
-                <div>
-                    <p class="menu-item__additional-information">Aux zestes d'orange</p>
-                    <p class="menu-item__price">25€</p>
-                </div>
+        <section class="menu">
+            <h1 class="menu__title">
+                <span>À la française</span><i class="fa-regular fa-heart"></i>
+            </h1>
+            <div class="menu__content">
+                <section>
+                    <h2>Entrées</h2>
+                    <hr>
+                    <div class="menu-item">
+                        <h3 class="menu-item__name">Tartare de poulpe acidulé</h3>
+                        <div>
+                            <p class="menu-item__additional-information">Aux zestes d'orange</p>
+                            <p class="menu-item__price">25€</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="menu-item__name">Velouté de légumes d'antan</h3>
+                        <div>
+                            <p class="menu-item__additional-information">Carotte, panais, topinambour</p>
+                            <p class="menu-item__price">35€</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="menu-item__name">Soupe à l'oignon</h3>
+                        <div>
+                            <p class="menu-item__additional-information">Revisitée</p>
+                            <p class="menu-item__price">20€</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Plats</h2>
+                    <hr>
+                    <div class="menu-item">
+                        <h3 class="menu-item__name">Coquilles Saint-Jacques</h3>
+                        <div>
+                            <p class="menu-item__additional-information">Accompagnées d'une purée de panais</p>
+                            <p class="menu-item__price">40€</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="menu-item__name">Magret de canard</h3>
+                        <div>
+                            <p class="menu-item__additional-information">Et parmentier de pommes de terre</p>
+                            <p class="menu-item__price">35€</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="menu-item__name">Pigeonneau d’Ille-et-Vilaine</h3>
+                        <div>
+                            <p class="menu-item__additional-information">Sur son lit de gnocchis aux légumes</p>
+                            <p class="menu-item__price">44€</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Desserts</h2>
+                    <hr>
+                    <div class="menu-item">
+                        <h3 class="menu-item__name">Pétales de violettes glacés</h3>
+                        <div>
+                            <p class="menu-item__additional-information">Et purée de noisettes</p>
+                            <p class="menu-item__price">18€</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="menu-item__name">Fondant au chocolat</h3>
+                        <div>
+                            <p class="menu-item__additional-information">Revisité</p>
+                            <p class="menu-item__price">22€</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <h3 class="menu-item__name">Millefeuille croustillant</h3>
+                        <div>
+                            <p class="menu-item__additional-information">Myrtilles et pâte d’amande</p>
+                            <p class="menu-item__price">23€</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="menu-item">
-                <h3 class="menu-item__name">Velouté de légumes d'antan</h3>
-                <div>
-                    <p class="menu-item__additional-information">Carotte, panais, topinambour</p>
-                    <p class="menu-item__price">35€</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <h3 class="menu-item__name">Soupe à l'oignon</h3>
-                <div>
-                    <p class="menu-item__additional-information">Revisitée</p>
-                    <p class="menu-item__price">20€</p>
-                </div>
+            <div class="menu__button-container">
+                <button class="button order-button">Commander</button>
             </div>
         </section>
-        <section>
-            <h2>Plats</h2>
-            <div class="menu-item">
-                <h3 class="menu-item__name">Coquilles Saint-Jacques</h3>
-                <div>
-                    <p class="menu-item__additional-information">Accompagnées d'une purée de panais</p>
-                    <p class="menu-item__price">40€</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <h3 class="menu-item__name">Magret de canard</h3>
-                <div>
-                    <p class="menu-item__additional-information">Et parmentier de pommes de terre</p>
-                    <p class="menu-item__price">35€</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <h3 class="menu-item__name">Pigeonneau d’Ille-et-Vilaine</h3>
-                <div>
-                    <p class="menu-item__additional-information">Sur son lit de gnocchis aux légumes</p>
-                    <p class="menu-item__price">44€</p>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2>Desserts</h2>
-            <div class="menu-item">
-                <h3 class="menu-item__name">Pétales de violettes glacés</h3>
-                <div>
-                    <p class="menu-item__additional-information">Et purée de noisettes</p>
-                    <p class="menu-item__price">18€</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <h3 class="menu-item__name">Fondant au chocolat</h3>
-                <div>
-                    <p class="menu-item__additional-information">Revisité</p>
-                    <p class="menu-item__price">22€</p>
-                </div>
-            </div>
-            <div class="menu-item">
-                <h3 class="menu-item__name">Millefeuille croustillant</h3>
-                <div>
-                    <p class="menu-item__additional-information">Myrtilles et pâte d’amande</p>
-                    <p class="menu-item__price">23€</p>
-                </div>
-            </div>
-        </section>
-        <div>
-            <button class="button">Commander</button>
-        </div>
     </main>
     <footer class="footer">
         <p class="footer__title">
