@@ -3,14 +3,14 @@
     background-color: $color-background-footer;
     color: $color-text-footer;
     &__title {
-        @media (min-width: 768px) {
+        @include tablets-and-wider {
             text-align: center;
         }
     }
     &__elements {
         display: flex;
         flex-direction: column;
-        @media (min-width: 768px) {
+        @include tablets-and-wider {
             flex-direction: row;
             justify-content: space-between;
         }
@@ -19,7 +19,7 @@
         list-style: none;
         li {
             margin-bottom: 5px;
-            @media (min-width: 768px) {
+            @include tablets-and-wider {
                 width: 24%;
             }
             a {

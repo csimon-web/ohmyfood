@@ -26,6 +26,9 @@ The requirements were:
 - As the target audience is connected and in a hurry, the site will be developed using
 mobile-first approach. For this reason, only mobile mockups will be made.
 - On tablet and desktop, the site will have to adapt, but given that these supports are not a priority, their layout is open to a personnal vision from the developper.
+- The whole site will have to be responsive on mobile, tablet and desktop.
+- The pages will have to pass the W3C validation in HTML and CSS without error.
+- The site must be fully compatible with the latest desktop versions of Chrome and Firefox.
 
 ### Built With
 

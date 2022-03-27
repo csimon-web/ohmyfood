@@ -27,7 +27,7 @@
         }
     }
     &__content {
-        @media (min-width: 768px) {
+        @include tablets-and-wider {
             display:flex;
             flex-direction: row;
             justify-content: space-between;
@@ -35,7 +35,7 @@
         > section {
             margin-bottom: 40px;
             padding: 0 20px;
-            @media (min-width: 768px) {
+            @include tablets-and-wider {
                 width: 33%;
             }
             > h2 {

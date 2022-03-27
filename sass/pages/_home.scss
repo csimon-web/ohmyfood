@@ -1,5 +1,5 @@
 .home-main-tag {
-    @media (min-width: 768px) {
+    @include tablets-and-wider {
         box-shadow: inset 0px 5px 10px -12px $color-text-body;
     }
     &__section {
@@ -15,12 +15,12 @@
     > div {
         display: flex;
         flex-direction: column;
-        @media (min-width: 768px) {
+        @include tablets-and-wider {
             flex-direction: row;
             justify-content: space-around;
         }
         > section {
-            @media (min-width: 768px) {
+            @include tablets-and-wider {
                 width: 48%;
                 &:nth-child(2) {
                     padding: 0 20px;
@@ -30,7 +30,7 @@
         }
         &:nth-child(1) {
             > section:nth-child(1) {
-                @media (min-width: 768px) {
+                @include tablets-and-wider {
                     background-color: $color-background-main-secondary;
                 }
             } 
@@ -66,15 +66,6 @@
         margin: 0 30px 30px 30px;
         color: lighten($color-text-body, 20%);
     }
-    /*&__search-button {
-        margin-bottom: 50px;
-        border: none;
-        border-radius: 50px;
-        padding: 20px;
-        width: 50%;
-        background: $color-primary;
-        color: $color-text-footer;
-    }*/
 }
 
 .website-instructions {
@@ -117,16 +108,16 @@
     &__content {
         display: flex;
         flex-direction: column;
-        @media (min-width: 768px) {
+        @include tablets-and-wider {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
         }
         > a {
-            @media (min-width: 768px) {
+            @include tablets-and-wider {
                 width: 48%;
             }
-            @media (min-width: 992px) {
+            @include desktops-and-wider {
                 width: 31%;
             }
         }
