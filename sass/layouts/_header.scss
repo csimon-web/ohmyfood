@@ -8,13 +8,15 @@
         text-decoration: none;
         margin-left: 30px;
         margin-right: 0;
-        i {
-            color: $color-text-body;
-        }
         &--other-side {
             margin-left: 0;
             margin-right: 30px;  
         }
+        i {
+            color: $color-text-body;
+        }
     }
-    &__title {}
+    &__title {
+        margin: 0;
+    }
 }
