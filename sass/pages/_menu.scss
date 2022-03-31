@@ -114,12 +114,13 @@
         border-radius: 0 20px 20px 0;
         transform-origin: right;
         transform: translateX(60px);
-        transition: transform 700ms ease-in-out;
+        transition: transform 2000ms ease-in-out;
+        transition: width 2000ms ease-in-out;
         i {
             display: inline-block;
             font-size: nth($font-size, 2);
             transform: translateX(60px) rotate(-360deg);
-            transition: transform 700ms ease-in-out;
+            transition: transform 2000ms ease-in-out;
         }
     }
 }
