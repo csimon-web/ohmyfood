@@ -22,8 +22,8 @@
         padding: 20px 20px 0 20px;
         background-color: $color-background-main-primary;
         line-height: 40px;
-        > i {
-            text-align: right;
+        > h1 {
+            width: 100%;
         }
     }
     &__content {
@@ -72,12 +72,13 @@
             width: 60px;
             transform: scaleX(1);
             i {
-                transform: rotate(0deg) translateX(0);
+                transform: translateX(0) rotate(0deg);
             }
         }
     }
     &__description {
         flex: 1;
+        min-width: 20px;
         > div {
             display: flex;
         }
@@ -113,12 +114,12 @@
         border-radius: 0 20px 20px 0;
         transform-origin: right;
         transform: scaleX(0);
-        transition: transform 700ms ease-in-out;
+        transition: transform 1700ms ease-in-out;
         i {
             display: inline-block;
             font-size: nth($font-size, 2);
-            transform: rotate(-90deg) translateX(60px);
-            transition: transform 700ms ease-in-out;
+            transform: translateX(60px) rotate(-90deg);
+            transition: transform 1700ms ease-in-out;
         }
     }
 }

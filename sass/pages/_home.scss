@@ -183,12 +183,8 @@
         &__location {}
     }
     &__like {
-        position: relative;
-        margin: auto 0;
+        margin: auto 0 auto 20px;
+        width: 30px;
         font-size: 30px;
-        > i.fa-regular {}
-        > i.fa-solid {
-            color: $active-like-button-color;
-        }
     }
 }

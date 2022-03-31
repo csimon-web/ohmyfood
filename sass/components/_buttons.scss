@@ -13,3 +13,36 @@
         cursor: pointer;
     }
 }
+
+.like-button {
+    position: relative;
+    &:hover {
+        .like-icon--clicked {
+            opacity: 1;
+        }
+    }
+    .like-icon {
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        /*background-color: $color-background-body;*/
+        &--clicked {
+            z-index: -1;
+            background: linear-gradient($color-primary, $color-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 1;
+            transition: opacity 250ms;
+        }
+        &--menu-page {
+            width: 50px;
+            background-color: $color-background-main-primary;
+        }
+        &--menu-page-clicked {
+            ;
+        }
+    }
+}
