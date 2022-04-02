@@ -57,29 +57,33 @@ h3 {
 
 .like-button {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
 }
 .like-button:hover .like-icon--clicked {
   opacity: 1;
+  z-index: 2;
 }
 .like-button .like-icon {
   z-index: 0;
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  /*background-color: $color-background-body;*/
+  background-color: #FFF;
+  color: #000;
+  font-size: 36px;
+  z-index: 1;
 }
 .like-button .like-icon--clicked {
   z-index: -1;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 1;
-  transition: opacity 250ms;
+  opacity: 0;
+  transition: opacity 500ms;
 }
 .like-button .like-icon--menu-page {
-  width: 50px;
+  /*width: 50px;*/
   background-color: #F6F6F6;
 }
 .header {
@@ -328,9 +332,9 @@ h3 {
   font-family: "Roboto", sans-serif;
 }
 .restaurant-card__like {
-  margin: auto 0 auto 20px;
+  /*margin: auto 0 auto 20px;
   width: 30px;
-  font-size: 30px;
+  font-size: 30px;*/
 }
 
 .menu-main-tag {
@@ -360,7 +364,8 @@ h3 {
   line-height: 40px;
 }
 .menu__title > h1 {
-  width: 100%;
+  flex: 1;
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .menu__content {
@@ -406,7 +411,7 @@ h3 {
 }
 .menu-item:hover > .menu-item__checked {
   width: 60px;
-  transform: translateX(0);
+  /*transform: translateX(0);*/
 }
 .menu-item:hover > .menu-item__checked i {
   transform: translateX(0) rotate(0deg);
@@ -442,21 +447,22 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 0px;
+  width: 0;
   background-color: #99E2D0;
   color: #F6F6F6;
   margin: -20px -20px -20px 20px;
   border-radius: 0 20px 20px 0;
-  transform-origin: right;
+  /*transform-origin: right;
   transform: translateX(60px);
-  transition: transform 2000ms ease-in-out;
-  transition: width 2000ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  will-change: transform;*/
+  transition: width 500ms ease-in-out;
 }
 .menu-item__checked i {
   display: inline-block;
   font-size: 24px;
   transform: translateX(60px) rotate(-360deg);
-  transition: transform 2000ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 
 .order-button {

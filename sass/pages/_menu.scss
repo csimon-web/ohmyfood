@@ -23,7 +23,8 @@
         background-color: $color-background-main-primary;
         line-height: 40px;
         > h1 {
-            width: 100%;
+            flex: 1;
+            margin: 0;
         }
     }
     &__content {
@@ -70,7 +71,7 @@
         cursor: pointer;
         > .menu-item__checked {
             width: 60px;
-            transform: translateX(0);
+            /*transform: translateX(0);*/
             i {
                 transform: translateX(0) rotate(0deg);
             }
@@ -107,20 +108,21 @@
         display:flex;
         align-items:center;
         justify-content:center;
-        width: 0px;
+        width: 0;
         background-color: $color-tertiary;
         color: $color-background-main-primary;
         margin: -20px -20px -20px 20px;
         border-radius: 0 20px 20px 0;
-        transform-origin: right;
+        /*transform-origin: right;
         transform: translateX(60px);
-        transition: transform 2000ms ease-in-out;
-        transition: width 2000ms ease-in-out;
+        transition: transform 500ms ease-in-out;
+        will-change: transform;*/
+        transition: width 500ms ease-in-out;
         i {
             display: inline-block;
             font-size: nth($font-size, 2);
             transform: translateX(60px) rotate(-360deg);
-            transition: transform 2000ms ease-in-out;
+            transition: transform 500ms ease-in-out;
         }
     }
 }
