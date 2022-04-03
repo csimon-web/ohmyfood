@@ -22,3 +22,12 @@ $breakpoints: (
     tablet: 768px,
     desktop: 992px
 );
+
+@keyframes menu-appearance {
+    from {
+      transform: translateY(-110%);
+    }
+    to {
+      transform: translateY(0);
+    }
+}

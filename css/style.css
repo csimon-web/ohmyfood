@@ -1,3 +1,11 @@
+@keyframes menu-appearance {
+  from {
+    transform: translateY(-110%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 /*@import "./utils/functions";*/
 /*@import "./utils/extensions";*/
 * {
@@ -374,29 +382,52 @@ h3 {
     justify-content: space-between;
   }
 }
-.menu__content > section {
+.plates-group {
   margin-bottom: 40px;
-  padding: 0 20px;
+  padding: 0;
+  /*padding: 0 20px;*/
 }
 @media screen and (min-width: 768px) {
-  .menu__content > section {
+  .plates-group {
     width: 33%;
   }
 }
-.menu__content > section > h2 {
+.plates-group__title {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
   margin-bottom: 5px;
+  padding: 0 20px;
 }
-.menu__content > section > hr {
-  margin: 0;
-  margin-bottom: 10px;
+.plates-group__title-underlining {
+  margin: 0 20px 10px 20px;
+  /*margin-bottom: 10px;*/
   border: 1px solid #99E2D0;
   width: 10%;
 }
+.plates-group__container {
+  overflow: hidden;
+}
+.plates-group__content {
+  padding: 10px 20px 0 20px;
+  animation: menu-appearance 0.5s;
+  animation-fill-mode: both;
+}
+
+.appetizers .plates-group__content {
+  animation-delay: 0.5s;
+}
+
+.main-courses .plates-group__content {
+  animation-delay: 1.5s;
+}
+
+.desserts .plates-group__content {
+  animation-delay: 2.5s;
+}
+
 .menu-item {
   display: flex;
   margin-bottom: 20px;
