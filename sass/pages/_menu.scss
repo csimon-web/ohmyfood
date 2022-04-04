@@ -85,8 +85,7 @@
     }
     &__content {
         padding: 10px 20px 0 20px;
-        animation: menu-appearance .5s;
-        animation-fill-mode: both;
+        animation: menu-appearance .5s both;
     }
 }
 

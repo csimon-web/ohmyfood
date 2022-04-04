@@ -5,7 +5,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Ohmyfood Screen Shot][product-screenshot]](https://example.com)
+[![Ohmyfood Screenshot][product-screenshot]](https://christophe-simon.github.io/ohmyfood/)
 
 Ohmyfood! is an fictive online meal ordering company. Their concept allows users to compose their own menu and reduce their waiting time in restaurants as their menu is prepared in advance.
 
@@ -53,7 +53,7 @@ sudo apt-get install git
  
 1. Clone the repo
 ```sh
-git clone https://github.com/christophe-simon/name-of-the-repo
+git clone https://github.com/christophe-simon/ohmyfood.git
 ```
 2. Open the index.html file in your favorite internet browser
 
@@ -99,4 +99,4 @@ Project Link: [https://github.com/christophe-simon/ohmyfood](https://github.com/
 [license-url]: https://github.com/christophe-simon/ohmyfood/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: docs/cover.jpg
+[product-screenshot]: docs/screenshot.png
