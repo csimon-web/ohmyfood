@@ -42,6 +42,14 @@
         padding: 20px 20px 0 20px;
         background-color: $color-background-main-primary;
         line-height: 40px;
+        @include tablets-and-wider {
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+        @include desktops-and-wider {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
         > h1 {
             flex: 1;
             margin: 0;
@@ -49,20 +57,33 @@
     }
     &__content {
         @include tablets-and-wider {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        @include desktops-and-wider {
             display:flex;
             flex-direction: row;
             justify-content: space-between;
+            padding-left: 0;
+            padding-right: 0;
         }
     }
     &__button-container {
+        @include tablets-and-wider {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        @include desktops-and-wider {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
 
 .plates-group {
     margin-bottom: 40px;
     padding: 0;
-    /*padding: 0 20px;*/
-    @include tablets-and-wider {
+    @include desktops-and-wider {
         width: 33%;
     }
     &__title {
@@ -76,7 +97,6 @@
     }
    &__title-underlining {
         margin: 0 20px 10px 20px;
-        /*margin-bottom: 10px;*/
         border: 1px solid $color-tertiary;
         width: 10%;
     }
@@ -99,7 +119,6 @@
     animation-delay: 2.5s;
 }
 
-
 .menu-item {
     display: flex;
     margin-bottom: 20px;
@@ -110,11 +129,26 @@
     overflow: hidden;
     &:hover {
         cursor: pointer;
-        > .menu-item__checked {
-            width: 60px;
-            /*transform: translateX(0);*/
-            i {
-                transform: translateX(0) rotate(0deg);
+        .menu-item {
+            /*&__description {
+                > .menu-item__description {
+                    &__name {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    &__additional-information {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+            }*/
+            &__checked {
+                width: 60px;
+                i {
+                    transform: translateX(0) rotate(0deg);
+                }
             }
         }
     }
@@ -154,10 +188,6 @@
         color: $color-background-main-primary;
         margin: -20px -20px -20px 20px;
         border-radius: 0 20px 20px 0;
-        /*transform-origin: right;
-        transform: translateX(60px);
-        transition: transform 500ms ease-in-out;
-        will-change: transform;*/
         transition: width 500ms ease-in-out;
         i {
             display: inline-block;

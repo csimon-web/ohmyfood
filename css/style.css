@@ -1,3 +1,5 @@
+/*@import "./utils/functions";*/
+/*@import "./utils/extensions";*/
 @keyframes menu-appearance {
   from {
     transform: translateY(-110%);
@@ -24,8 +26,6 @@
     z-index: -1;
   }
 }
-/*@import "./utils/functions";*/
-/*@import "./utils/extensions";*/
 * {
   box-sizing: border-box;
 }
@@ -178,6 +178,11 @@ h3 {
   text-decoration: underline;
 }
 
+.restaurant-card-link {
+  text-decoration: none;
+  color: #000;
+}
+
 @media screen and (min-width: 768px) {
   .home-main-tag {
     box-shadow: inset 0px 5px 10px -12px #000;
@@ -300,12 +305,12 @@ h3 {
   }
 }
 @media screen and (min-width: 768px) {
-  .restaurants-section__content > a {
+  .restaurants-section__content > div {
     width: 48%;
   }
 }
 @media screen and (min-width: 992px) {
-  .restaurants-section__content > a {
+  .restaurants-section__content > div {
     width: 31%;
   }
 }
@@ -315,8 +320,6 @@ h3 {
   margin-bottom: 20px;
   border-radius: 20px;
   box-shadow: 1px 1px 8px #999;
-  text-decoration: none;
-  color: #000;
 }
 .restaurant-card__illustration {
   position: relative;
@@ -347,22 +350,19 @@ h3 {
   text-align: center;
   line-height: 30px;
 }
-.restaurant-card > div:nth-child(2) {
+.restaurant-card > div {
   display: flex;
   justify-content: space-between;
   border-radius: 0 0 20px 20px;
   padding: 0 20px 10px 20px;
   background-color: #FFF;
 }
+.restaurant-card__description {
+  flex: 1;
+}
 .restaurant-card__description__name {
   font-family: "Roboto", sans-serif;
 }
-.restaurant-card__like {
-  /*margin: auto 0 auto 20px;
-  width: 30px;
-  font-size: 30px;*/
-}
-
 .loader-container {
   background-color: #FFF;
   width: 100%;
@@ -409,23 +409,55 @@ h3 {
   background-color: #F6F6F6;
   line-height: 40px;
 }
+@media screen and (min-width: 768px) {
+  .menu__title {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu__title {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .menu__title > h1 {
   flex: 1;
   margin: 0;
 }
 @media screen and (min-width: 768px) {
   .menu__content {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
+@media screen and (min-width: 768px) {
+  .menu__button-container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu__button-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .plates-group {
   margin-bottom: 40px;
   padding: 0;
-  /*padding: 0 20px;*/
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .plates-group {
     width: 33%;
   }
@@ -441,7 +473,6 @@ h3 {
 }
 .plates-group__title-underlining {
   margin: 0 20px 10px 20px;
-  /*margin-bottom: 10px;*/
   border: 1px solid #99E2D0;
   width: 10%;
 }
@@ -450,8 +481,7 @@ h3 {
 }
 .plates-group__content {
   padding: 10px 20px 0 20px;
-  animation: menu-appearance 0.5s;
-  animation-fill-mode: both;
+  animation: menu-appearance 0.5s both;
 }
 
 .appetizers .plates-group__content {
@@ -478,11 +508,26 @@ h3 {
 .menu-item:hover {
   cursor: pointer;
 }
-.menu-item:hover > .menu-item__checked {
-  width: 60px;
-  /*transform: translateX(0);*/
+.menu-item:hover .menu-item {
+  /*&__description {
+      > .menu-item__description {
+          &__name {
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+          }
+          &__additional-information {
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+          }
+      }
+  }*/
 }
-.menu-item:hover > .menu-item__checked i {
+.menu-item:hover .menu-item__checked {
+  width: 60px;
+}
+.menu-item:hover .menu-item__checked i {
   transform: translateX(0) rotate(0deg);
 }
 .menu-item__description {
@@ -521,10 +566,6 @@ h3 {
   color: #F6F6F6;
   margin: -20px -20px -20px 20px;
   border-radius: 0 20px 20px 0;
-  /*transform-origin: right;
-  transform: translateX(60px);
-  transition: transform 500ms ease-in-out;
-  will-change: transform;*/
   transition: width 500ms ease-in-out;
 }
 .menu-item__checked i {
