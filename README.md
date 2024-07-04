@@ -70,8 +70,10 @@ git clone https://github.com/csimon-web/ohmyfood.git
 
 ## Usage
 
-In this project, you have an home page displaying the front side of the application. It shows 4 restaurants that you'll be able to like (this will require javascript, the project did not focus on this functionality) and you can click on each of them to access to the page dedicated to each of them.
-The 4 restaurants pages display the menus proposed by these restaurants. These menus show up with an animation. When you move the mouse over an element of the menu, you can see another animation.
+This project is the front side of the application, focused on the HTML and CSS code (the Javascript will be developped then). You have:
+
+- a home page displaying the data about 4 restaurants that you'll be able to like (which will be done later, when the Javascript will be developped). You can click on any restaurant to access to its own dedicated page.
+- the 4 restaurants pages displaying the menus proposed by these restaurants. These menus show up with an animation. When you move the mouse over an element of the menu, you can see another animation.
 
 <!-- CONTACT -->
 
